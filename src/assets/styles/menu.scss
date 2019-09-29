@@ -1,0 +1,10 @@
+.side-menu {
+    width: 30%;
+    text-align: left;
+    background-color: lightgrey;
+    height: 100vh;
+    &__nav {
+        display: flex;
+        flex-direction: column;
+    }
+}

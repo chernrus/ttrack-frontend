@@ -4,6 +4,9 @@ import Home from './views/Home.vue'
 import AppLayout from '@/components/Layout/AppLayout/AppLayout.vue';
 import PageWrapper from '@/components/Layout/PageWrapper/PageWrapper.vue';
 
+import Tracker from '@/views/Tracker/Tracker.vue';
+import Pomodoro from '@/views/Pomodoro/Pomodoro.vue';
+
 Vue.use(Router)
 
 export default new Router({
@@ -19,15 +22,19 @@ export default new Router({
                     component: PageWrapper,
                     children: [
                         {
-                            path: '/home',
-                            component: Home,
+                            path: '/',
+                            component: Tracker,
                         },
                         {
-                            path: '/app',
+                            path: '/pomodoro',
+                            component: Pomodoro,
+                        },
+                        {
+                            path: '/desk',
                             component: Home
                         },
                         {
-                            path: '/about',
+                            path: '/calendar',
                             name: 'about',
                             // route level code-splitting
                             // this generates a separate chunk (about.[hash].js) for this route

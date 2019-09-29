@@ -1,11 +1,11 @@
 <template>
     <div class="side-menu">
         Side Menu
-        <div id="nav">
-          <router-link to="/">Home</router-link> |
-          <router-link to="/about">About</router-link> |
-          <router-link to="/home">Home is home</router-link> |
-          <router-link to="/app">App</router-link>
+        <div id="nav" class="side-menu__nav">
+          <router-link to="/">Tracker</router-link>
+          <router-link to="/pomodoro">Pomodoro</router-link>
+          <router-link to="/desk">Desk</router-link>
+          <router-link to="/calendar">Calendar</router-link>
         </div>
     </div>
 </template>
