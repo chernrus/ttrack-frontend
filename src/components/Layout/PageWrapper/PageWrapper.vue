@@ -8,6 +8,6 @@
 
 <style lang="scss">
     .page-wrapper {
-        padding: 0 20px;
+        padding: 10px 20px;
     }
 </style>

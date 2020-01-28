@@ -1,9 +1,15 @@
-import SideMenu from "../SideMenu/SideMenu.vue";
+import TheSideMenu from "../TheSideMenu/TheSideMenu.vue";
 
 export default {
     name: 'AppLayout',
     components: {
-        SideMenu
+        TheSideMenu
+    },
+    props: {
+        title: {
+            type: String,
+            default: '',
+        },
     },
     data() {
         return {
@@ -12,6 +18,10 @@ export default {
     },
     created() {
         console.log(this);
-        console.log(SideMenu);
+    },
+    computed: {
+        pageTitle() {
+            return this.$route.meta.title || this.title;
+        }
     }
 }

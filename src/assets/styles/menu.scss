@@ -1,10 +1,31 @@
 .side-menu {
-    width: 30%;
+    width: 20%;
     text-align: left;
     background-color: lightgrey;
     height: 100vh;
+    &__title {
+        font-size: 28px;
+        font-weight: 700;
+        padding: 10px 20px;
+        border-bottom: 1px solid #ccc;
+        background-color: #ccc;
+        color: #fff;
+    }
     &__nav {
         display: flex;
         flex-direction: column;
+    }
+    &__link {
+        padding: 10px 20px;
+        font-weight: 700;
+        text-decoration: none;
+        color: #000;
+        font-size: 18px;
+        &:hover {
+            background-color: #fff;
+        }
+        &_active {
+            background-color: #efefef;
+        }
     }
 }

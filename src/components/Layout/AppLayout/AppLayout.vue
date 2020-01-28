@@ -1,7 +1,11 @@
 <template>
     <div class="app-layout">
-        <SideMenu></SideMenu>
-        <router-view :key="$route.fullPath"/>
+        <TheSideMenu></TheSideMenu>
+        <div class="app-layout__content">
+            <div v-if="pageTitle"
+                class="main-page-title">{{pageTitle}}</div>
+            <router-view :key="$route.fullPath"/>
+        </div>
     </div>
 </template>
 

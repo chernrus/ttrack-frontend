@@ -1,6 +1,6 @@
 <template lang="html">
     <div class="time-tracker">
-        <h1>Pomodoro WIP</h1>
+        content
     </div>
 </template>
 
