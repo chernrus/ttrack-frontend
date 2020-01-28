@@ -1,6 +1,8 @@
 <template lang="html">
     <div class="time-tracker">
-        content
+        <TimeControll/>
+        <div class="stroke-line"></div>
+        <TimeList/>
     </div>
 </template>
 

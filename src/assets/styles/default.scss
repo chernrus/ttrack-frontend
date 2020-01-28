@@ -1,5 +1,13 @@
+* {
+    box-sizing: border-box;
+}
 body {
     margin: 0;
     padding: 0;
     font-size: 16px;
+}
+
+.stroke-line {
+    border-top: 1px solid #E0E3E8;
+    margin: 8px 0px 16px 0;
 }
