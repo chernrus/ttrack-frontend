@@ -3,6 +3,6 @@ export default {
     data() {
         return {
 
-        }
-    }
-}
+        };
+    },
+};

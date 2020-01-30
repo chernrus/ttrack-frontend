@@ -1,7 +1,7 @@
 <template lang="html">
     <div class="time-controll">
-        TimeControll
-        <el-row>
+        <h3>TimeControll</h3>
+        <el-row align="bottom" type="flex">
             <el-col :span="6" >
                 <label>Name</label>
                 <el-input v-model="formModel.name" placeholder=""></el-input>

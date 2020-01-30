@@ -11,12 +11,12 @@ export default {
         }).setView([51.505, -0.09], 13);
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: 'Leaflet-canvas-markers'
+            attribution: 'Leaflet-canvas-markers',
         }).addTo(map);
 
 
         /* Create poits */
-        let points = [
+        const points = [
             {
                 type: 'point',
                 coordinates: [51.524, -0.14],
@@ -68,13 +68,13 @@ export default {
 
         /* Show lines */
         const line = points.map(point => point.coordinates);
-        L.polyline(line, {color: '#178a00'}).addTo(map);
+        L.polyline(line, { color: '#178a00' }).addTo(map);
 
 
         /* Show points */
         points.sort((a, b) => a.priority - b.priority);
 
-        points.forEach(point => {
+        points.forEach((point) => {
             switch (point.type) {
             case 'point':
                 L.circleMarker(point.coordinates, {
@@ -98,5 +98,5 @@ export default {
                 break;
             }
         });
-    }
-}
+    },
+};

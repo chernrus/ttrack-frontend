@@ -5,6 +5,9 @@ export default {
     name: 'Tracker',
     components: {
         TimeControll,
-        TimeList
-    }
-}
+        TimeList,
+    },
+    created() {
+        window.tracker = this;
+    },
+};

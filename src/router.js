@@ -1,12 +1,12 @@
-import Vue from 'vue'
-import Router from 'vue-router'
+import Vue from 'vue';
+import Router from 'vue-router';
 import AppLayout from '@/components/Layout/AppLayout/AppLayout.vue';
 import PageWrapper from '@/components/Layout/PageWrapper/PageWrapper.vue';
 
 const Tracker = () => import('@/views/Tracker/Tracker.vue');
 const Pomodoro = () => import('@/views/Pomodoro/Pomodoro.vue');
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
     mode: 'history',
@@ -64,10 +64,10 @@ export default new Router({
                                 title: 'Leaflet map (test npm)',
                             },
                         },
-                    ]
+                    ],
                 },
-            ]
+            ],
         },
 
-    ]
-})
+    ],
+});

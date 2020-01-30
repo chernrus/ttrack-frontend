@@ -6,21 +6,21 @@ export default {
             sideMenu: [
                 {
                     url: '/tracker',
-                    title: 'Tracker'
+                    title: 'Tracker',
                 },
                 {
                     url: '/pomodoro',
-                    title: 'Pomodoro'
+                    title: 'Pomodoro',
                 },
                 {
                     url: '/desk',
-                    title: 'Desk'
+                    title: 'Desk',
                 },
                 {
                     url: '/calendar',
                     title: 'Calendar',
                 },
             ],
-        }
-    }
-}
+        };
+    },
+};
