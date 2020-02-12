@@ -1,3 +1,7 @@
 .el-row .el-col {
     padding: 0 10px;
 }
+
+.el-textarea__inner {
+    min-height: 40px !important;
+}
