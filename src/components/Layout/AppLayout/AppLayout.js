@@ -17,7 +17,6 @@ export default {
         };
     },
     created() {
-        console.log(this);
     },
     computed: {
         pageTitle() {
