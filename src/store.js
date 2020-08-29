@@ -49,11 +49,21 @@ export default new Vuex.Store({
             // }
             localStorage.setItem('timeStorage', JSON.stringify(timeList));
         },
+        removeTimeTask(state, _id) {
+            const { timeList } = state;
+            const itemIndex = timeList.findIndex(({ id }) => id === _id);
+            console.log(itemIndex);
+            timeList.splice(itemIndex, 1);
+            Vue.set(state, 'timeList', timeList);
+            localStorage.setItem('timeStorage', JSON.stringify(timeList));
+        },
     },
     actions: {
-        loadTimeList(storage) {
-            console.log(storage);
-            storage.commit('loadTimeList');
+        loadTimeList({ commit }) {
+            commit('loadTimeList');
+        },
+        removeTimeTask({ commit }, id) {
+            commit('removeTimeTask', id);
         },
     },
 });

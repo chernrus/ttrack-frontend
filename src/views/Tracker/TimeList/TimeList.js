@@ -1,5 +1,4 @@
-import { mapGetters } from 'vuex';
-import moment from 'moment';
+import { mapGetters, mapActions } from 'vuex';
 
 
 export default {
@@ -13,5 +12,14 @@ export default {
         }),
     },
     created() {
+    },
+    methods: {
+        ...mapActions([
+            'removeTimeTask',
+        ]),
+        remove({ id }) {
+            console.log(id);
+            this.removeTimeTask(id);
+        },
     },
 };
