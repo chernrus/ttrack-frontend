@@ -44,15 +44,11 @@ export default new Vuex.Store({
             });
 
             Vue.set(state, 'timeList', timeList);
-            // if (!localStorage.getItem('timeStorage')) {
-            //     localStorage.setItem('timeStorage', { timeList: [] });
-            // }
             localStorage.setItem('timeStorage', JSON.stringify(timeList));
         },
         removeTimeTask(state, _id) {
             const { timeList } = state;
             const itemIndex = timeList.findIndex(({ id }) => id === _id);
-            console.log(itemIndex);
             timeList.splice(itemIndex, 1);
             Vue.set(state, 'timeList', timeList);
             localStorage.setItem('timeStorage', JSON.stringify(timeList));

@@ -11,14 +11,17 @@ export default {
                 {
                     url: '/pomodoro',
                     title: 'Pomodoro',
+                    disabled: true,
                 },
                 {
                     url: '/desk',
                     title: 'Desk',
+                    disabled: true,
                 },
                 {
                     url: '/calendar',
                     title: 'Calendar',
+                    disabled: true,
                 },
             ],
         };

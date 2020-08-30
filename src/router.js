@@ -3,8 +3,8 @@ import Router from 'vue-router';
 import AppLayout from '@/components/Layout/AppLayout/AppLayout.vue';
 import PageWrapper from '@/components/Layout/PageWrapper/PageWrapper.vue';
 
-const Tracker = () => import('@/views/Tracker/Tracker.vue');
-const Pomodoro = () => import('@/views/Pomodoro/Pomodoro.vue');
+const Tracker = () => import(/* webpackChunkName: "tracker" */ '@/views/Tracker/Tracker.vue');
+const Pomodoro = () => import(/* webpackChunkName: "pomodoro" */ '@/views/Pomodoro/Pomodoro.vue');
 
 Vue.use(Router);
 

@@ -13,12 +13,18 @@
             <el-table-column
                 prop="start_t"
                 label="Start">
-                <span slot-scope="scope">{{ scope.row.start_t | time() }}</span>
+                <template slot-scope="scope">
+                    <span>{{ scope.row.start_t | time() }}</span>
+                    <!-- <el-button type="text" icon="el-icon-document-copy" circle></el-button> -->
+                </template>
             </el-table-column>
             <el-table-column
                 prop="end_t"
                 label="End">
-                <span slot-scope="scope">{{ scope.row.end_t | time() }}</span>
+                <template slot-scope="scope">
+                    <span>{{ scope.row.end_t | time() }}</span>
+                    <!-- <el-button type="text" icon="el-icon-document-copy" circle></el-button> -->
+                </template>
             </el-table-column>
             <el-table-column
                 prop="description"
@@ -27,10 +33,16 @@
             </el-table-column>
             <el-table-column
                 prop="edit"
-                label="">
+                label="Total">
                 <template slot-scope="scope">
-                    <el-button type="danger" icon="el-icon-delete" circle @click="remove(scope.row)"></el-button>
+                    <span>{{ totalTime(scope.row) }}</span>
+                    <el-button type="text" icon="el-icon-document-copy" circle @click="copyToClipboard(scope.row)"></el-button>
                 </template>
+            </el-table-column>
+            <el-table-column
+                prop="edit"
+                label="">
+                <el-button slot-scope="scope" type="danger" icon="el-icon-delete" circle @click="remove(scope.row)"></el-button>
             </el-table-column>
         </el-table>
         <!-- <div>
